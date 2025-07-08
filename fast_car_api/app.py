@@ -2,7 +2,6 @@ from fastapi import FastAPI
 
 from .routers import router as car_router
 
-
 app = FastAPI(
     title='Fast Car API',
     description='LoboProgrammingg modern Car API',

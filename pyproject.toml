@@ -5,3 +5,20 @@ description = "API moderna com FastAPI"
 authors = [
     {name = "LoboProgrammingg", email = "matheusloboo2001@gmail.com"}
 ]
+
+[tool.ruff]
+extend-exclude = ['migrations']
+
+[tool.ruff.lint]
+preview = true
+select = ['I', 'F', 'E', 'W', 'PL', 'PT']
+
+[tool.ruff.format]
+preview = true
+quote-style = 'single'
+
+[tool.taskipy.tasks]
+lint = 'ruff check'
+lint_fix = 'ruff check --fix'
+format = 'ruff format'
+run = 'fastapi dev fast_car_api/app.py'
